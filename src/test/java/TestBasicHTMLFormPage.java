@@ -45,12 +45,12 @@ public class TestBasicHTMLFormPage extends PropertyCheckAndSet{
         assertThat(newTitle,is("Processed Form Details"));
 
     }
-/**
+
     @AfterClass
     public static void closeWebPage(){
 
         driver.close();
         driver=null;
     }
-**/
+
 }
