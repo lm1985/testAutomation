@@ -3,7 +3,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.BasicAjaxPage;
 import pageObjects.BasicHtmlFormPage;
 
 import java.io.IOException;
@@ -37,8 +36,8 @@ public class TestBasicHTMLFormPage extends PropertyCheckAndSet{
     @Test
     public void testUNamePwdSubmit(){
 
-        BasicHtmlFormPage bhfp = new BasicHtmlFormPage( driver);
-
+        BasicHtmlFormPage bhfp = new BasicHtmlFormPage(driver);
+        //driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         bhfp.getUserName().sendKeys("abc");
         bhfp.getPassword().sendKeys("123");
         bhfp.getSubmitButton().click();
@@ -46,12 +45,12 @@ public class TestBasicHTMLFormPage extends PropertyCheckAndSet{
         assertThat(newTitle,is("Processed Form Details"));
 
     }
-
+/**
     @AfterClass
     public static void closeWebPage(){
 
         driver.close();
         driver=null;
     }
-
+**/
 }

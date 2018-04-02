@@ -13,7 +13,7 @@ public class BasicHtmlFormPage {
     By username = By.cssSelector("input[name='username']");
     By password = By.cssSelector("input[name='password']");
     By commentsbox = By.cssSelector("textarea[name='comments']");
-    By submitbutton = By.name("submitbutton");
+    By submitbutton = By.cssSelector("input[value='submit']");
 
     public BasicHtmlFormPage(WebDriver driver){
 
